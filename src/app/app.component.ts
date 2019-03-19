@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Ciudad } from './ciudad/ciudad';
+import { TemperaturaServiceService } from './temperatura-service.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'kata2Nuevo';
+  title = 'kata2';
+  public ciudades: Array <Ciudad> = [];
+  constructor( private apiTemperatura: TemperaturaServiceService) { }
+
+  public agregarCiudad(nuevoNombre: string): void {
+    this.ciudades.push({
+      nombre: nuevoNombre,
+      temperatura: this.apiTemperatura.obtenerTemperatura()
+      });
+  }
+
 }

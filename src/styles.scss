@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    width: 1000px;
+    height: 600px;
+    background-color: #7ee8fa;
+background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+}
+.principal {
+    margin-top: 250px;
+    align-items: center;
+    justify-content: center
+ }
+
+button {
+    background-color: #80ff72;
+    border-bottom-color: white 12px;
+    border-radius: 12%;
+    height: 100px;
+    width: 200px;
+
+}
+input {
+    height: px;
+}
